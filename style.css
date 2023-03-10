@@ -37,11 +37,14 @@ header {
   right: 0;
 }
 nav ul {
-  display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
-
 nav li {
-  margin: 0 10px;
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
 nav a:hover {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Dragusanu Cosmin-Gabriel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,49 +11,70 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="about">
             <h1>About Me</h1>
-            <p>Write a brief introduction about yourself here.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Other relevant skills</li>
-            </ul>
+            <p>I'm a second-year student with a passion for programming and tech world. I enjoy challenging myself to learn new things and applying my knowledge to real-world problems. When I'm not studying, you can usually find me working on personal projects that allow me to explore my creativity and hone my skills.</p>
         </section>
         <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="#">Project 1</a></li>
-                <li><a href="#">Project 2</a></li>
-                <li><a href="#">Project 3</a></li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project">
+      <a href="https://github.com/DragusanuCosmin/GMChess-ongoing-" target="_blank">
+      	<p>GMChess</p>
+        <img src="src\chessboard.jpg" alt="GMChess Image" class="project-img">
+        
+      </a>
+    </div>
+    <div class="project">
+    	<p class=".project-text">Coordgiver</p>
+      <a href="https://github.com/DragusanuCosmin/CoordGiver" target="_blank">
+        <img src="src\Untitled.png" alt="Project 2 Image" class="project-img">
+        
+      </a>
+    </div>
+  </div>
+  <div id="animation-container">
+      <img src="src\giphy.gif" alt="animated image" />
+    </div>
+</section>
+       
     </main>
     <footer>
-        <p>&copy; Your Name 2023</p>
+        <p>&copy; Dragusanu Cosmin 2023</p>
     </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  var container = $("#animation-container img");
+  var parent = container.parent();
+  var maxX = parent.width() - container.width();
+  var maxY = parent.height() - container.height();
+  var speed = 5;
+  var xDirection = 1;
+  var yDirection = 1;
+
+  setInterval(function() {
+    var newX = parseInt(container.css("left")) + (speed * xDirection);
+    var newY = parseInt(container.css("top")) + (speed * yDirection);
+
+    if (newX < 0 || newX > maxX) {
+      xDirection *= -1;
+    }
+    if (newY < 0 || newY > maxY) {
+      yDirection *= -1;
+    }
+    container.css({
+      "margin-left": newX + "px",
+      "margin-top": newY + "px"
+    });
+  }, 20);
+});
+</script>
 </body>
 </html>

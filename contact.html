@@ -7,16 +7,17 @@
 	<style>
 		body {
 			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
 			margin: 0;
+			background-image: url(src/19449741.jpg);
 		}
 		
 		#contact {
 			background-color: #fff;
 			padding: 30px;
 			margin: 50px auto;
-			max-width: 600px;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			max-width: 650px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+			background-color: rgba(255, 255, 255, 0.1);
 		}
 		
 		#contact h2 {
@@ -36,7 +37,7 @@
 		#contact input[type="text"],
 		#contact input[type="email"],
 		#contact textarea {
-			width: 100%;
+			width: 95%;
 			padding: 10px;
 			border: 2px solid #ccc;
 			border-radius: 4px;
@@ -63,12 +64,52 @@
 		#contact button[type="submit"]:hover {
 			background-color: #555;
 		}
+
+		#social-icons {
+			position: fixed;
+			left: 10px;
+			top: 45%;
+			transform: translateY(-50%);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+		}
+
+		#social-icons a {
+			display: block;
+			margin-bottom: 20px;
+			width: 40px;
+			height: 40px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 50%;
+			color: #fff;
+			font-size: 24px;
+			text-align: center;
+			line-height: 40px;
+			transition: background-color 0.3s ease;
+		}
+
+		#social-icons a:hover {
+			opacity: 0.7;
+		}
 	</style>
 </head>
 <body>
+	<section id="social-icons">
+		<a href="https://www.facebook.com/cosmin.gabriel.3781"><i class="fa fa-facebook" ></i>
+		<img src="src/facebook_icon.png" alt="Facebook icon" width="40" height="40",style="border-radius: 100%;">
+		</a>
+		<a href="https://www.instagram.com/cosmin.gabriel54/?hl=en"><i class="fa fa-instagram"></i>
+		<img src="src/instagram_icon.png" alt="Instagram icon" width="40" height="40",style="border-radius: 100%;">
+		</a>
+		<a href="#"><i class="fa fa-linkedin"></i>
+		<img src="src/linkedin_icon.png" alt="Linkedin icon" width="40" height="40",style="border-radius: 100%;">
+		</a>
+			</section>
 	<section id="contact">
 		<h2>Contact</h2>
-		<form>
+		<form action="mailto:gabrielcosmin402@gmail.com?subject=Contact%20Form&body=Name:%20%0A%0AEmail:%20%0A%0AMessage:%20" method="post" enctype="text/plain">
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name" required>
 			<label for="email">Email:</label>

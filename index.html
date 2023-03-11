@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragusanu Cosmin-Gabriel</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="src/icon.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="https://github.com/DragusanuCosmin">About</a></li>
+                <li><a href="https://github.com/DragusanuCosmin" target="_blank">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -19,62 +20,30 @@
     <main>
         <section id="about">
             <h1>About Me</h1>
-            <p>I'm a second-year student with a passion for programming and tech world. I enjoy challenging myself to learn new things and applying my knowledge to real-world problems. When I'm not studying, you can usually find me working on personal projects that allow me to explore my creativity and hone my skills.</p>
+            <p>My name is Dragusanu Cosmin-Gabriel. I'm a second-year student with a passion for programming and tech world. I enjoy challenging myself to learn new things and applying my knowledge to real-world problems. When I'm not studying, you can usually find me working on personal projects that allow me to explore my creativity and hone my skills.</p>
         </section>
         <section id="projects">
   <h2>Projects</h2>
   <div class="projects-container">
     <div class="project">
       <a href="https://github.com/DragusanuCosmin/GMChess-ongoing-" target="_blank">
-      	<p>GMChess</p>
+      	<p class="project-text">GMChess</p>
         <img src="src\chessboard.jpg" alt="GMChess Image" class="project-img">
         
       </a>
     </div>
     <div class="project">
-    	<p class=".project-text">Coordgiver</p>
       <a href="https://github.com/DragusanuCosmin/CoordGiver" target="_blank">
+      	<p class="project-text">Coordgiver</p>
         <img src="src\Untitled.png" alt="Project 2 Image" class="project-img">
         
       </a>
     </div>
   </div>
-  <div id="animation-container">
-      <img src="src\giphy.gif" alt="animated image" />
-    </div>
 </section>
-       
     </main>
     <footer>
         <p>&copy; Dragusanu Cosmin 2023</p>
     </footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-  var container = $("#animation-container img");
-  var parent = container.parent();
-  var maxX = parent.width() - container.width();
-  var maxY = parent.height() - container.height();
-  var speed = 5;
-  var xDirection = 1;
-  var yDirection = 1;
-
-  setInterval(function() {
-    var newX = parseInt(container.css("left")) + (speed * xDirection);
-    var newY = parseInt(container.css("top")) + (speed * yDirection);
-
-    if (newX < 0 || newX > maxX) {
-      xDirection *= -1;
-    }
-    if (newY < 0 || newY > maxY) {
-      yDirection *= -1;
-    }
-    container.css({
-      "margin-left": newX + "px",
-      "margin-top": newY + "px"
-    });
-  }, 20);
-});
-</script>
 </body>
 </html>

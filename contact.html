@@ -3,20 +3,80 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Contact</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			margin: 0;
+		}
+		
+		#contact {
+			background-color: #fff;
+			padding: 30px;
+			margin: 50px auto;
+			max-width: 600px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		#contact h2 {
+			font-size: 36px;
+			margin-bottom: 30px;
+			text-align: center;
+			color: #333;
+		}
+		
+		#contact label {
+			display: block;
+			font-size: 18px;
+			margin-bottom: 10px;
+			color: #333;
+		}
+		
+		#contact input[type="text"],
+		#contact input[type="email"],
+		#contact textarea {
+			width: 100%;
+			padding: 10px;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			margin-bottom: 20px;
+			resize: none;
+		}
+		
+		#contact textarea {
+			height: 200px;
+		}
+		
+		#contact button[type="submit"] {
+			background-color: #333;
+			color: #fff;
+			font-size: 18px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		#contact button[type="submit"]:hover {
+			background-color: #555;
+		}
+	</style>
 </head>
 <body>
- <section id="contact">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+	<section id="contact">
+		<h2>Contact</h2>
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" required></textarea>
+			<button type="submit">Send</button>
+		</form>
+	</section>
 </body>
 </html>
